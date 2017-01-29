@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Online 1</title>
+    </head>
+    <body>
+        <input type="text" id="imgTitle" placeholder="enter title">
+        <input type="text" id="imgUrl" placeholder="enter img url">
+        <button type="button" id="displayBtn">Display</button>
+        <div id="display"></div>
+    </body>
+    <script>
+        var displayBtn = document.getElementById("displayBtn");
+        var display = document.getElementById("display");
+        var imgTitle = document.getElementById("imgTitle");
+        var imgUrl = document.getElementById("imgUrl");
+        displayBtn.addEventListener("click", function(){
+            
+            var title_div = document.createElement("div");
+            var display_div = document.createElement("div");
+            title_div.addClass = "title_div";
+            display_div.addClass = "display_div";
+            
+            
+            display.appendChild(title_div);
+            title_div.innerHTML = imgTitle.value;
+            display.appendChild(display_div);
+            display_div.innerHTML = "<img src='" + imgUrl.value + "'>";
+        });
+            
+    </script>
+</html>
+
